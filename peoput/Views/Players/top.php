@@ -10,7 +10,7 @@
   <!-- <header>
     <img src="/img/peoput.png">
   </header> -->
-  <?php include "/0428/peoput/public/Views/Players/header.php"; ?>
+  <?php include "/header.php"; ?>
   <body>
     <div class="top">
       <img class="hana" src="/0428/peoput/public/img/peoput4.png">
