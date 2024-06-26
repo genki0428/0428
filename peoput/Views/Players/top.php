@@ -10,7 +10,7 @@
   <!-- <header>
     <img src="/img/peoput.png">
   </header> -->
-  <?php include "/header.php"; ?>
+  <?php include "header.php"; ?>
   <body>
     <div class="top">
       <img class="hana" src="/0428/peoput/public/img/peoput4.png">
@@ -79,5 +79,5 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.17.0/jquery.validate.min.js"></script>
     <script src="/0428/peoput/public/js/top.js"></script>
   </body>
-  <?php include "/0428/peoput/public/Views/Players/footer.php"; ?>
+  <?php include "/peoput/public/Views/Players/footer.php"; ?>
 </html>
