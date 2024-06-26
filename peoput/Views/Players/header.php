@@ -4,7 +4,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta charset="UTF-8">
     <title></title>
-    <link rel="stylesheet" type="text/css" href="/0428/peoput/public/css/style.css">
+    <link rel="stylesheet" type="text/css" href="/0428/peoput/public/css/header.css">
   </head>
   <header>
     <div class="header">
