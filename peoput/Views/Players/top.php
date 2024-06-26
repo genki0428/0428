@@ -79,5 +79,5 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.17.0/jquery.validate.min.js"></script>
     <script src="/0428/peoput/public/js/top.js"></script>
   </body>
-  <?php include "/peoput/public/Views/Players/footer.php"; ?>
+  <?php include "footer.php"; ?>
 </html>
