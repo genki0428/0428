@@ -1,0 +1,197 @@
+@charset "UTF-8";
+/* reset */
+body, h1, h2, h3, h4, h5, h6, p, address,
+ul, ol, li, dl, dt, dd, img, form, table, tr, th, td {
+	margin: 0;
+	padding: 0;
+	border: none;
+	font-style: normal;
+	/* font-weight: normal;
+	font-size: 100%; */
+	text-align: left;
+	list-style-type: none;
+	border-collapse: collapse;
+}
+
+textarea { font-size: 100%; vertical-align:middle;}
+/* img { border-style: none; display: block; } */
+hr { display: none; }
+em{font-style: normal}
+input{line-height:auto;vertical-align:middle;}
+strong.more{color:#c30}
+a{text-decoration: none;}
+
+body {
+	font-family:'ヒラギノ角ゴ Pro W3','Hiragino Kaku Gothic Pro','メイリオ',Meiryo,'ＭＳ Ｐゴシック',sans-serif;
+}
+
+* {
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	-o-box-sizing: border-box;
+	-ms-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+header{
+  position: sticky;
+  top: 0;
+  z-index: 999;
+}
+
+.header{
+  padding: 0 10px;
+  display: flex;
+  justify-content: space-between;
+  height: 30px;
+  line-height: 30px;
+  background-color: black;
+}
+
+.header img{
+  height: 30px;
+}
+
+.headerMenu{  
+  width: 150px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.headerMenu a{
+  color: white;
+  font-weight: bold;
+  font-size: 0.9rem;
+}
+
+.headerLogoutForm{
+  width: unset;
+  margin: unset !important;
+}
+
+.headerLogout{  
+  width: unset;
+  margin: unset;
+  padding: unset;
+  border-radius: unset;
+  line-height: unset;
+  color: white;
+  font-weight: bold;
+  font-size: 0.9rem;
+  background: none;
+  font-family: 'ヒラギノ角ゴ Pro W3', 'Hiragino Kaku Gothic Pro', 'メイリオ', Meiryo, 'ＭＳ Ｐゴシック', sans-serif;
+}
+
+
+
+/* チェックボックスを非表示にする */
+.drawer_hidden {
+  display: none;
+}
+
+/* ハンバーガーアイコンの設置スペース */
+.drawer_open {
+  display: flex;
+  height: 60px;
+  width: 60px;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  z-index: 100;/* 重なり順を一番上にする */
+  cursor: pointer;
+}
+
+/* ハンバーガーメニューのアイコン */
+.drawer_open span,
+.drawer_open span:before,
+.drawer_open span:after {
+  content: '';
+  display: block;
+  height: 3px;
+  width: 25px;
+  border-radius: 3px;
+  background: #ffffff;
+  transition: 0.5s;
+  position: absolute;
+}
+
+/* 三本線の一番上の棒の位置調整 */
+.drawer_open span:before {
+  bottom: 8px;
+}
+
+/* 三本線の一番下の棒の位置調整 */
+.drawer_open span:after {
+  top: 8px;
+}
+
+/* アイコンがクリックされたら真ん中の線を透明にする */
+#drawer_input:checked ~ .drawer_open span {
+  background: rgba(255, 255, 255, 0);
+}
+
+/* アイコンがクリックされたらアイコンが×印になように上下の線を回転 */
+#drawer_input:checked ~ .drawer_open span::before {
+  bottom: 0;
+  transform: rotate(45deg);
+}
+
+#drawer_input:checked ~ .drawer_open span::after {
+  top: 0;
+  transform: rotate(-45deg);
+}
+  
+/* メニューのデザイン*/
+.nav_content {
+  width: 130px;
+  height: 100px;
+  position: absolute;
+  top: 70px;
+  z-index: 99;
+  transition: 1.5s;
+  background-color: black;
+  border-radius: 15%;
+  padding: 20px 0;
+  right: 100%; /* メニューを画面の外に飛ばす */
+  opacity: 0;
+}
+
+/* メニュー黒ポチを消す */
+.nav_list {
+  list-style: none;
+}
+
+.nav_item{
+  text-align: center;
+}
+
+.nav_item a{
+  color: white;
+  font-weight: bold;
+}
+
+/* アイコンがクリックされたらメニューを表示 */
+#drawer_input:checked ~ .nav_content {
+  right: 20px;/* メニューを画面に入れる */
+  opacity: 1;
+}
+
+
+
+@media screen and (max-width: 481px) {
+  .header {
+    height: 60px;
+  }
+  .header img{
+    margin: auto 0;
+  }
+  .headerMenu{
+    display: none;
+  }
+}
+
+@media screen and (min-width: 480px) {
+  .nav{
+    display: none;
+  }
+}
