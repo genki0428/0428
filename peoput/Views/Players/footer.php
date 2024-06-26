@@ -10,5 +10,4 @@
     <div class="footer">
       <img src="/img/peoput3.png">
     </div>
-    <script src="footer.js"></script>
   </footer>

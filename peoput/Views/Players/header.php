@@ -4,11 +4,11 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta charset="UTF-8">
     <title></title>
-    <link rel="stylesheet" type="text/css" href="/css/header.css">
+    <link rel="stylesheet" type="text/css" href="/0428/peoput/public/css/style.css">
   </head>
   <header>
     <div class="header">
-      <img src="/img/peoput.png">
+      <img src="/0428/peoput/public/img/peoput.png">
       <div class="headerMenu">
         <a href="login.php">Login</a>
         <a href="newUser.php">SignUp</a>
@@ -31,11 +31,6 @@
             <li class="nav_item"><a href="newUser.php">SignUp</a></li>
           </ul>
         </nav>
-   
       </div>
-
-
-
     </div>
-    <script src="header.js"></script>
   </header>
