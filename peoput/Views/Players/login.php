@@ -1,6 +1,8 @@
 <?php
 session_start();
 require_once(ROOT_PATH .'/Controllers/Controller.php');
+require_once(ROOT_PATH .'/0428/peoput/public/Controllers/Controller.php');
+require_once(ROOT_PATH .'../../Controllers/Controller.php');
 $login = new Controller();
 $result = $login->checkLogin();
 if ($result) {
@@ -17,10 +19,10 @@ session_destroy();
   <head>
     <meta charset="UTF-8">
     <title>ログイン</title>
-    <link rel="stylesheet" type="text/css" href="/css/base.css">
-    <link rel="stylesheet" type="text/css" href="/css/style.css">
+    <link rel="stylesheet" type="text/css" href="/0428/peoput/public/css/base.css">
+    <link rel="stylesheet" type="text/css" href="/0428/peoput/public/css/style.css">
   </head>
-  <?php include "../Views/Players/header.php"; ?>
+  <?php include "header.php"; ?>
   <body>
     <form action="myPage.php" method="post" id="form">
       <?php if (isset($loginMsg['Lmsg'])) : ?>
@@ -46,5 +48,5 @@ session_destroy();
       </div>
     </form>
   </body>
-  <?php include "../Views/Players/footer.php"; ?>
+  <?php include "footer.php"; ?>
 </html>
