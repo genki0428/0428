@@ -1,20 +1,20 @@
 <?php
-session_start();
-require_once(ROOT_PATH .'/0428/peoput/public/Controllers/Controller.php');
-require_once(ROOT_PATH .'/peoput/public/Controllers/Controller.php');
-require_once(ROOT_PATH .'/public/Controllers/Controller.php');
-require_once(ROOT_PATH .'/Controllers/Controller.php');
-require_once(ROOT_PATH .'../Controllers/Controller.php');
-require_once(ROOT_PATH .'../../Controllers/Controller.php');
-$login = new Controller();
-$result = $login->checkLogin();
-if ($result) {
-  header('Location: myPage.php');
-  exit;
-}
-$loginMsg = $_SESSION;
-$_SESSION = array();
-session_destroy();
+// session_start();
+// require_once(ROOT_PATH .'/0428/peoput/public/Controllers/Controller.php');
+// require_once(ROOT_PATH .'/peoput/public/Controllers/Controller.php');
+// require_once(ROOT_PATH .'/public/Controllers/Controller.php');
+// require_once(ROOT_PATH .'/Controllers/Controller.php');
+// require_once(ROOT_PATH .'../Controllers/Controller.php');
+// require_once(ROOT_PATH .'../../Controllers/Controller.php');
+// $login = new Controller();
+// $result = $login->checkLogin();
+// if ($result) {
+//   header('Location: myPage.php');
+//   exit;
+// }
+// $loginMsg = $_SESSION;
+// $_SESSION = array();
+// session_destroy();
 ?>
 
 <!DOCTYPE html>
