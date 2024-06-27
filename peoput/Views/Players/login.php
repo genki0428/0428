@@ -1,7 +1,7 @@
 <?php
 session_start();
-require_once(ROOT_PATH .'/0428/peoput/public/Controllers/Controller.php');
-// require_once(ROOT_PATH .'/peoput/public/Controllers/Controller.php');
+// require_once(ROOT_PATH .'/0428/peoput/public/Controllers/Controller.php');
+require_once(ROOT_PATH .'/peoput/public/Controllers/Controller.php');
 // require_once(ROOT_PATH .'/public/Controllers/Controller.php');
 // require_once(ROOT_PATH .'/Controllers/Controller.php');
 // require_once(ROOT_PATH .'../Controllers/Controller.php');
