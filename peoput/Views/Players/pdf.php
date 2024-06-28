@@ -9,8 +9,7 @@ $others = $_POST['others'];
 
 ?>
 <?php
-include "/0428/peoput/public/tcpdf/tcpdf.php";
-
+include(dirname(__FILE__).'/../../public/tcpdf/tcpdf.php');
 $tcpdf = new TCPDF();
 $tcpdf->AddPage();
 

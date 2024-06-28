@@ -19,8 +19,8 @@ $err = $_SESSION;
   <head>
     <meta charset="UTF-8">
     <title>知人一覧</title>
-    <link rel="stylesheet" type="text/css" href="/css/base.css">
-    <link rel="stylesheet" type="text/css" href="/css/style.css">
+    <link rel="stylesheet" type="text/css" href="/0428/peoput/public/css/base.css">
+    <link rel="stylesheet" type="text/css" href="/0428/peoput/public/css/style.css">
   </head>
   <?php include "header2.php"; ?>
   <body>
