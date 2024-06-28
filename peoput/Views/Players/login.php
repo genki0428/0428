@@ -6,7 +6,7 @@ session_start();
 // require_once(ROOT_PATH .'/Controllers/Controller.php');
 // require_once(ROOT_PATH .'../Controllers/Controller.php');
 // require_once(ROOT_PATH .'../../Controllers/Controller.php');
-require_once(dirname(__FILE__).'../../Controllers/Controller.php');
+require_once(dirname(__FILE__).'/../../Controllers/Controller.php');
 $login = new Controller();
 $result = $login->checkLogin();
 if ($result) {
