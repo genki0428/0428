@@ -1,5 +1,6 @@
 <?php
-require_once(ROOT_PATH .'/Models/Model.php');
+// require_once(ROOT_PATH .'/Models/Model.php');
+require_once(dirname(__FILE__).'/../Models/Model.php');
 
 class Controller {
   private $request;     //リクエストパラメータ（GET,POST）

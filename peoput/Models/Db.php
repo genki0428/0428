@@ -1,5 +1,6 @@
 <?php
-require_once(ROOT_PATH .'/database.php');
+// require_once(ROOT_PATH .'/database.php');
+require_once(dirname(__FILE__).'/../database.php');
 
 class Db {
   protected $dbh;

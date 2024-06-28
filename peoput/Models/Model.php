@@ -1,5 +1,6 @@
 <?php
-require_once(ROOT_PATH .'/Models/Db.php');
+// require_once(ROOT_PATH .'/Models/Db.php');
+require_once(dirname(__FILE__).'/Db.php');
 
 class Model extends Db {
   public function __construct($dbh = null) {
