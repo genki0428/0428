@@ -1,6 +1,6 @@
 <?php
 session_start();
-require_once(ROOT_PATH .'/Controllers/Controller.php');
+require_once(dirname(__FILE__).'/../../Controllers/Controller.php');
 $acquaintanceDel = new Controller();
 $result2 = $acquaintanceDel->checkLogin();
 if (!$result2) {
@@ -17,8 +17,8 @@ header("Location: acquaintanceAll.php");
   <head>
     <meta charset="UTF-8">
     <title>peoput_知人削除</title>
-    <link rel="stylesheet" type="text/css" href="/css/base.css">
-    <link rel="stylesheet" type="text/css" href="/css/style.css">
+    <link rel="stylesheet" type="text/css" href="/0428/peoput/public/css/base.css">
+    <link rel="stylesheet" type="text/css" href="/0428/peoput/public/css/style.css">
   </head>
   <body>
   </body>

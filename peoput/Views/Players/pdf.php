@@ -9,7 +9,7 @@ $others = $_POST['others'];
 
 ?>
 <?php
-include "./tcpdf/tcpdf.php";
+include "/0428/peoput/public/tcpdf/tcpdf.php";
 
 $tcpdf = new TCPDF();
 $tcpdf->AddPage();

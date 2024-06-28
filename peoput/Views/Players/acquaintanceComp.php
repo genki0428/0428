@@ -1,6 +1,6 @@
 <?php
 session_start();
-require_once(ROOT_PATH .'/Controllers/Controller.php');
+require_once(dirname(__FILE__).'/../../Controllers/Controller.php');
 $createTb = new Controller();
 $result2 = $createTb->checkLogin();
 if (!$result2) {
@@ -16,10 +16,10 @@ $createTb->addNewAcquaintance();
   <head>
     <meta charset="UTF-8">
     <title>知人登録完了</title>
-    <link rel="stylesheet" type="text/css" href="/css/base.css">
-    <link rel="stylesheet" type="text/css" href="/css/style.css">
+    <link rel="stylesheet" type="text/css" href="/0428/peoput/public/css/base.css">
+    <link rel="stylesheet" type="text/css" href="/0428/peoput/public/css/style.css">
   </head>
-  <?php include "../Views/Players/header.php"; ?>
+  <?php include "header2.php"; ?>
   <body>
     <div class="container1" style="
     text-align: center;
@@ -38,5 +38,5 @@ $createTb->addNewAcquaintance();
       </div>
     </div>
   </body>
-  <?php include "../Views/Players/footer.php"; ?>
+  <?php include "footer.php"; ?>
 </html>

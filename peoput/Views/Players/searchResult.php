@@ -1,7 +1,7 @@
 <?php
 session_start();
 unset($_SESSION['Smsg']);
-require_once(ROOT_PATH .'/Controllers/Controller.php');
+require_once(dirname(__FILE__).'/../../Controllers/Controller.php');
 $acquaintanceSearch = new Controller();
 $result2 = $acquaintanceSearch->checkLogin();
 if (!$result2) {
@@ -20,10 +20,10 @@ $loginMsg = $_SESSION;
   <head>
     <meta charset="UTF-8">
     <title>peoput_検索結果</title>
-    <link rel="stylesheet" type="text/css" href="/css/base.css">
-    <link rel="stylesheet" type="text/css" href="/css/style.css">
+    <link rel="stylesheet" type="text/css" href="/0428/peoput/public/css/base.css">
+    <link rel="stylesheet" type="text/css" href="/0428/peoput/public/css/style.css">
   </head>
-  <?php include "../Views/Players/header2.php"; ?>
+  <?php include "header2.php"; ?>
   <body>
     <?php if (isset($loginMsg['Smsg'])) : ?>
       <div class="backCntainer">
@@ -64,7 +64,7 @@ $loginMsg = $_SESSION;
               <td>
                 <a href ="acquaintanceDetail.php?id=<?=$searchRedult['id'] ?>">
                   <span class="tooltip">
-                    <img class="buttonimg" src="/img/詳細.png">
+                    <img class="buttonimg" src="/0428/peoput/public/img/詳細.png">
                     <span class="description">項目の詳細</span>
                   </span>
                 </a>
@@ -72,7 +72,7 @@ $loginMsg = $_SESSION;
               <td>
                 <a href ="acquaintanceEdit.php?id=<?=$searchRedult['id'] ?>">
                   <span class="tooltip">
-                    <img class="buttonimg" src="/img/編集.png">
+                    <img class="buttonimg" src="/0428/peoput/public/img/編集.png">
                     <span class="description">項目の編集</span>
                   </span>
                 </a>
@@ -80,7 +80,7 @@ $loginMsg = $_SESSION;
               <td>
                 <a onclick="func(<?=$searchRedult['id'] ?>)">
                   <span class="tooltip">
-                    <img class="buttonimg" src="/img/削除.png">
+                    <img class="buttonimg" src="/0428/peoput/public/img/削除.png">
                     <span class="description">項目の削除</span>
                   </span>
                 </a>
@@ -97,7 +97,7 @@ $loginMsg = $_SESSION;
         </div>
       </div>
     <?php endif; ?>
-    <script src="/js/searchResult.js"></script>
+    <script src="/0428/peoput/public/js/searchResult.js"></script>
   </body>
-  <?php include "../Views/Players/footer.php"; ?>
+  <?php include "footer.php"; ?>
 </html>

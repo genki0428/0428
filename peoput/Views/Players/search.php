@@ -3,7 +3,7 @@ session_start();
 if (isset($_SESSION['msg'])) {
   unset($_SESSION['msg']);
 }
-require_once(ROOT_PATH .'/Controllers/Controller.php');
+require_once(dirname(__FILE__).'/../../Controllers/Controller.php');
 $communityList = new Controller();
 $result2 = $communityList->checkLogin();
 if (!$result2) {
@@ -20,10 +20,10 @@ $communityList->searchTblDel();
   <head>
     <meta charset="UTF-8">
     <title>peoput_知人検索</title>
-    <link rel="stylesheet" type="text/css" href="/css/base.css">
-    <link rel="stylesheet" type="text/css" href="/css/style.css">
+    <link rel="stylesheet" type="text/css" href="/0428/peoput/public/css/base.css">
+    <link rel="stylesheet" type="text/css" href="/0428/peoput/public/css/style.css">
   </head>
-  <?php include "../Views/Players/header2.php"; ?>
+  <?php include "header2.php"; ?>
   <body>
     <div class="container1" style="
     text-align: center;
@@ -97,5 +97,5 @@ $communityList->searchTblDel();
       </form>
     </div>
   </body>
-  <?php include "../Views/Players/footer.php"; ?>
+  <?php include "footer.php"; ?>
 </html>

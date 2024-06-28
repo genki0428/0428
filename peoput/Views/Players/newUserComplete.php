@@ -1,6 +1,6 @@
 <?php
 session_start();
-require_once(ROOT_PATH .'/Controllers/Controller.php');
+require_once(dirname(__FILE__).'/../../Controllers/Controller.php');
 $switch = new Controller();
 // $result3 = $switch->checkLogin();
 // if (!$result3) {
@@ -39,10 +39,10 @@ if (!preg_match("/^(?=.*[0-9])(?=.*[a-z])(?=.*[A-Z])[0-9a-zA-Z\-]{8,24}$/",$pass
   <head>
     <meta charset="UTF-8">
     <title>peoput_新規登録完了</title>
-    <link rel="stylesheet" type="text/css" href="/css/base.css">
-    <link rel="stylesheet" type="text/css" href="/css/style.css">
+    <link rel="stylesheet" type="text/css" href="/0428/peoput/public/css/base.css">
+    <link rel="stylesheet" type="text/css" href="/0428/peoput/public/css/style.css">
   </head>
-  <?php include "../Views/Players/header.php"; ?>
+  <?php include "header.php"; ?>
   <body>
     <?php if ($result === false) : ?>
       <?php if ($result2 === false) : ?>
@@ -71,5 +71,5 @@ if (!preg_match("/^(?=.*[0-9])(?=.*[a-z])(?=.*[A-Z])[0-9a-zA-Z\-]{8,24}$/",$pass
       </div>
     <?php endif ?>
   </body>
-  <?php include "../Views/Players/footer.php"; ?>
+  <?php include "footer.php"; ?>
 </html>

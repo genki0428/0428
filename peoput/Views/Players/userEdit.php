@@ -1,6 +1,6 @@
 <?php
 session_start();
-require_once(ROOT_PATH .'/Controllers/Controller.php');
+require_once(dirname(__FILE__).'/../../Controllers/Controller.php');
 $userData = new Controller();
 $result2 = $userData->checkLogin();
 if (!$result2) {
@@ -16,10 +16,10 @@ $result = $userData->userData();
   <head>
     <meta charset="UTF-8">
     <title>ユーザー編集</title>
-    <link rel="stylesheet" type="text/css" href="/css/base.css">
-    <link rel="stylesheet" type="text/css" href="/css/style.css">
+    <link rel="stylesheet" type="text/css" href="/0428/peoput/public/css/base.css">
+    <link rel="stylesheet" type="text/css" href="/0428/peoput/public/css/style.css">
   </head>
-  <?php include "../Views/Players/header2.php"; ?>
+  <?php include "header2.php"; ?>
   <body>
     <div class="container1" style="
     text-align: center;
@@ -49,5 +49,5 @@ $result = $userData->userData();
     </form>
     </div>
   </body>
-  <?php include "../Views/Players/footer.php"; ?>
+  <?php include "footer.php"; ?>
 </html>

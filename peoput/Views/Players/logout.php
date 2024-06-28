@@ -1,6 +1,6 @@
 <?php
 session_start();
-require_once(ROOT_PATH .'/Controllers/Controller.php');
+require_once(dirname(__FILE__).'/../../Controllers/Controller.php');
 $logout = new Controller();
 
 // postにlogoutが入って”いなかった”ら！
@@ -28,10 +28,10 @@ $logout->logout();
   <head>
     <meta charset="UTF-8">
     <title>オブジェクト指向 - ログアウト</title>
-    <link rel="stylesheet" type="text/css" href="/css/base.css">
-    <link rel="stylesheet" type="text/css" href="/css/style.css">
+    <link rel="stylesheet" type="text/css" href="/0428/peoput/public/css/base.css">
+    <link rel="stylesheet" type="text/css" href="/0428/peoput/public/css/style.css">
   </head>
-  <?php include "../Views/Players/header.php"; ?>
+  <?php include "header.php"; ?>
   <body>
     <div class="backCntainer">
       <p class="pText">ログアウトしました。</p>
@@ -42,4 +42,5 @@ $logout->logout();
       color: black;">login</a>
     </div>
   </body>
-  <?php include "../Views/Players/footer.php"; ?>
+  <?php include "footer.php"; ?>
+<html>

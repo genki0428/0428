@@ -1,6 +1,6 @@
 <?php
 session_start();
-require_once(ROOT_PATH .'/Controllers/Controller.php');
+require_once(dirname(__FILE__).'/../../Controllers/Controller.php');
 $login = new Controller();
 if(!isset($_SESSION['login_user'])) {
   $login->login();
@@ -15,10 +15,10 @@ if($_SESSION["login_user"]['role'] === 1) {
   <head>
     <meta charset="UTF-8">
     <title>マイページ</title>
-    <link rel="stylesheet" type="text/css" href="/css/base.css">
-    <link rel="stylesheet" type="text/css" href="/css/style.css">
+    <link rel="stylesheet" type="text/css" href="/0428/peoput/public/css/base.css">
+    <link rel="stylesheet" type="text/css" href="/0428/peoput/public/css/style.css">
   </head>
-  <?php include "../Views/Players/header2.php"; ?>
+  <?php include "header2.php"; ?>
   <body>
     <p class="welcome">Welcome!　Esq.<?php echo $_SESSION['login_user']['name']; ?></p>
     <div class="menuContainer">
@@ -33,5 +33,5 @@ if($_SESSION["login_user"]['role'] === 1) {
       <input style="margin: unset;" class="top" type="submit" name="logout" value="logout">
     </form>
   </body>
-  <?php include "../Views/Players/footer.php"; ?>
+  <?php include "footer.php"; ?>
 </html>

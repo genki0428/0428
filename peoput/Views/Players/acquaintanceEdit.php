@@ -1,6 +1,6 @@
 <?php
 session_start();
-require_once(ROOT_PATH .'/Controllers/Controller.php');
+require_once(dirname(__FILE__).'/../../Controllers/Controller.php');
 $communityList = new Controller();
 $result3 = $communityList->checkLogin();
 if (!$result3) {
@@ -18,15 +18,15 @@ $result2 = $detail->detail();
   <head>
     <meta charset="UTF-8">
     <title>知人編集</title>
-    <link rel="stylesheet" type="text/css" href="/css/base.css">
-    <link rel="stylesheet" type="text/css" href="/css/style.css">
+    <link rel="stylesheet" type="text/css" href="/0428/peoput/public/css/base.css">
+    <link rel="stylesheet" type="text/css" href="/0428/peoput/public/css/style.css">
   </head>
-  <?php include "../Views/Players/header2.php"; ?>
+  <?php include "header2.php"; ?>
   <body>
     <div class="container1" style="
     text-align: center;
     margin: 60px 20px;">
-      <img class="buttonimg" src="/img/編集.png" style="
+      <img class="buttonimg" src="/0428/peoput/public/img/編集.png" style="
       height: 60px;
       margin-bottom: 15px;">
       <form action="acquaintanceEditSend.php" method="post" id="form" style="
@@ -101,7 +101,7 @@ $result2 = $detail->detail();
     <script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
     <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.17.0/jquery.validate.min.js"></script>
-    <script src="/js/acquaintanceEdit.js"></script>
+    <script src="/0428/peoput/public/js/acquaintanceEdit.js"></script>
   </body>
-  <?php include "../Views/Players/footer.php"; ?>
+  <?php include "footer.php"; ?>
 </html>
