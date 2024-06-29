@@ -128,7 +128,7 @@ $loginMsg = $_SESSION;
                 </a>
                 <a onclick="func(<?=$searchResult['id'] ?>)">
                   <span class="tooltip">
-                    <img class="buttonimg" src="/0428/peoput/public /img/削除.png"
+                    <img class="buttonimg" src="/0428/peoput/public/img/削除.png"
                     ><span class="description">項目の削除</span>
                   </span>
                 </a>

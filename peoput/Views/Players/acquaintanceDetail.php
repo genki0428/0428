@@ -30,7 +30,7 @@ $result = $detail->detail();
         <img class="buttonimg" src="/0428/peoput/public/img/詳細.png" style="
         height: 60px;
         margin-bottom: 15px;">
-        <table>
+        <table class="table1">
           <tr>
             <th>community</th>
             <th>name</th>
@@ -69,6 +69,60 @@ $result = $detail->detail();
             </td>
           </tr>
         </table>
+
+        <table class="table2">
+          <tr>
+            <td hidden><?=$result['id'] ?></td>
+          </tr>
+          <tr>
+            <th>community</th>
+            <td><?=$result['community'] ?></td>
+          </tr>
+          <tr>
+            <th>name</th>
+            <td><?=$result['name'] ?></td>
+          </tr>
+          </tr>
+          <tr>
+            <th>age</th>
+            <td><?=$result['age'] ?></td>
+          </tr>
+          </tr>
+          <tr>
+            <th>sex</th>
+            <td><?=$result['sex'] ?></td>
+          </tr>
+          <tr>
+            <th>feature</th>
+            <td><?=$result['feature'] ?></td>
+          </tr>
+          <tr>
+            <th>remarks</th>
+            <td><?=$result['remarks'] ?></td>
+          </tr>
+          <tr>
+            <th>others</th>
+            <td><?=$result['others'] ?></td>
+          </tr>
+          <tr style="background-color: unset;">
+            <th style="width: 50px;"></th>
+            <td style="padding-bottom: 30px;">
+              <a href ="acquaintanceEdit.php?id=<?=$result['id'] ?>">
+                <span class="tooltip">
+                  <img class="buttonimg" src="/0428/peoput/public/img/編集.png">
+                  <span class="description">項目の編集</span>
+                </span>
+              </a>
+              <a onclick="func(<?=$result['id'] ?>)">
+                <span class="tooltip">
+                  <img class="buttonimg" src="/0428/peoput/public/img/削除.png"
+                  ><span class="description">項目の削除</span>
+                </span>
+              </a>
+            </td>
+          </tr>
+        </table>
+
       </div>
       <div class="backCntainer" style="
       margin: 0 auto;">
@@ -78,18 +132,16 @@ $result = $detail->detail();
         background: #d075ff;
         border: none">all</a>
         
-
-
-<form action="pdf.php" method="post">
-<input type="text" name="community" value="<?=$result['community'] ?>" hidden>
-<input type="text" name="name" value="<?=$result['name'] ?>" hidden>
-<input type="text" name="age" value="<?=$result['age'] ?>" hidden>
-<input type="text" name="sex" value="<?=$result['sex'] ?>" hidden>
-<input type="text" name="feature" value="<?=$result['feature'] ?>" hidden>
-<input type="text" name="remarks" value="<?=$result['remarks'] ?>" hidden>
-<input type="text" name="others" value="<?=$result['others'] ?>" hidden>
-<input type="submit" value="pdf">
-</form>
+        <form action="pdf.php" method="post">
+        <input type="text" name="community" value="<?=$result['community'] ?>" hidden>
+        <input type="text" name="name" value="<?=$result['name'] ?>" hidden>
+        <input type="text" name="age" value="<?=$result['age'] ?>" hidden>
+        <input type="text" name="sex" value="<?=$result['sex'] ?>" hidden>
+        <input type="text" name="feature" value="<?=$result['feature'] ?>" hidden>
+        <input type="text" name="remarks" value="<?=$result['remarks'] ?>" hidden>
+        <input type="text" name="others" value="<?=$result['others'] ?>" hidden>
+        <input type="submit" value="pdf">
+        </form>
 
       </div>
     </div>
