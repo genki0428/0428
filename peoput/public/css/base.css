@@ -264,4 +264,13 @@ textarea::placeholder {
     width: 350px;
     margin: 50px auto;
   }
+  .table1{
+    display: none;
+  }
+}
+
+@media (width >= 481px) {
+  .table2{
+    display: none;
+  }
 }

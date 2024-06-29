@@ -19,6 +19,7 @@ if (!$result) {
 }
 
 //ログアウト
+$logout->searchTblDel();
 $logout->logout();
 ?>
 

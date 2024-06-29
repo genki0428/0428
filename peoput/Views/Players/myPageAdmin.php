@@ -9,6 +9,7 @@ if (!$result2) {
   exit;
 }
 $result = $login->userList();
+$login->searchTblDel();
 ?>
 
 <!DOCTYPE html>

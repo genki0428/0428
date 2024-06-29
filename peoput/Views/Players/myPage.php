@@ -4,6 +4,7 @@ require_once(dirname(__FILE__).'/../../Controllers/Controller.php');
 $login = new Controller();
 if(!isset($_SESSION['login_user'])) {
   $login->login();
+  $login->searchTblDel();
 }
 if($_SESSION["login_user"]['role'] === 1) {
   header("Location: myPageAdmin.php");

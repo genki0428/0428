@@ -34,7 +34,8 @@ $err = $_SESSION;
           <a class="menu" style="
           background: #d075ff;
           margin: 20px auto;">all</a>
-        <table>
+
+        <table class="table1">
           <tr>
             <th>community</th>
             <th>name</th>
@@ -78,6 +79,54 @@ $err = $_SESSION;
           </tr>
           <?php endforeach; ?>
         </table>
+
+        <table class="table2">
+          <?php foreach($result['acquaintanceFullList'] as $acquaintanceList):?>
+          <tr>
+            <td hidden><?=$acquaintanceList['id'] ?></td>
+          </tr>
+          <tr>
+            <th>community</th>
+            <td><?=$acquaintanceList['community'] ?></td>
+          </tr>
+          <tr>
+            <th>name</th>
+            <td><?=$acquaintanceList['name'] ?></td>
+          </tr>
+          <tr>
+            <th>feature</th>
+            <td><?=$acquaintanceList['feature'] ?></td>
+          </tr>
+          <tr>
+            <th>remarks</th>
+            <td><?=$acquaintanceList['remarks'] ?></td>
+          </tr>
+          <tr>
+            <th style="width: 50px;"></th>
+            <td style="padding-bottom: 30px;">
+              <a href ="acquaintanceDetail.php?id=<?=$acquaintanceList['id'] ?>">
+                <span class="tooltip">
+                  <img class="buttonimg" src="/0428/peoput/public/img/詳細.png">
+                  <span class="description">項目の詳細</span>
+                </span>
+              </a>
+              <a href ="acquaintanceEdit.php?id=<?=$acquaintanceList['id'] ?>">
+                <span class="tooltip">
+                  <img class="buttonimg" src="/0428/peoput/public/img/編集.png">
+                  <span class="description">項目の編集</span>
+                </span>
+              </a>
+              <a onclick="func(<?=$acquaintanceList['id'] ?>)">
+                <span class="tooltip">
+                  <img class="buttonimg" src="/0428/peoput/public/img/削除.png"
+                  ><span class="description">項目の削除</span>
+                </span>
+              </a>
+            </td>
+          </tr>
+          <?php endforeach; ?>
+        </table>
+
         <?php endif; ?>
       </div>
       <div class="paging">
