@@ -1,6 +1,6 @@
 <?php
-// session_start();
-// require_once(dirname(__FILE__).'/../../Controllers/Controller.php');
+session_start();
+require_once(dirname(__FILE__).'/../../Controllers/Controller.php');
 // $acquaintanceEdit = new Controller();
 // $result = $acquaintanceEdit->checkLogin();
 // if (!$result) {
@@ -8,7 +8,7 @@
 // ?><a href="top.php">peoputトップへ</a><?php
 //   exit;
 // }
-// $acquaintanceEdit->acquaintanceEdit();
+$acquaintanceEdit->acquaintanceEdit();
 ?>
 
 <!DOCTYPE html>
