@@ -1,14 +1,14 @@
 <?php
-session_start();
-require_once(dirname(__FILE__).'/../../Controllers/Controller.php');
-$acquaintanceEdit = new Controller();
-$result = $acquaintanceEdit->checkLogin();
-if (!$result) {
-  echo "不正なリクエストです！";
-?><a href="top.php">peoputトップへ</a><?php
-  exit;
-}
-$acquaintanceEdit->acquaintanceEdit();
+// session_start();
+// require_once(dirname(__FILE__).'/../../Controllers/Controller.php');
+// $acquaintanceEdit = new Controller();
+// $result = $acquaintanceEdit->checkLogin();
+// if (!$result) {
+//   echo "不正なリクエストです！";
+// ?><a href="top.php">peoputトップへ</a><?php
+//   exit;
+// }
+// $acquaintanceEdit->acquaintanceEdit();
 ?>
 
 <!DOCTYPE html>
