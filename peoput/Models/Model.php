@@ -360,10 +360,10 @@ class Model extends Db {
    */
   public function acquaintanceEdit($id,$community, $name, $age, $sex, $feature, $remarks, $others) {
     $tbName['tbn'] = $_SESSION['login_user']['name'].'_'.$_SESSION['login_user']['id'];
-    // $sql = "SELECT DISTINCT community FROM $tbName[tbn]";
-    // $sth = $this->dbh->prepare($sql);
-    // $sth->execute();
-    // $result = $sth->fetchAll(PDO::FETCH_ASSOC);
+    $sql = "SELECT DISTINCT community FROM $tbName[tbn]";
+    $sth = $this->dbh->prepare($sql);
+    $sth->execute();
+    $result = $sth->fetchAll(PDO::FETCH_ASSOC);
     // foreach($result as $communityListVal) :
     //   $comN = $tbName['tbn'].'_'.$communityListVal['community'];
     //   $sql = "DELETE FROM $comN";
@@ -384,52 +384,52 @@ class Model extends Db {
     // $sth->execute();
 
     $tbName['tbn'] = $_SESSION['login_user']['name'].'_'.$_SESSION['login_user']['id'];
-    $sql = "SELECT DISTINCT community FROM $tbName[tbn]";
-    $sth = $this->dbh->prepare($sql);
-    $sth->execute();
-    $result2 = $sth->fetchAll(PDO::FETCH_ASSOC);
-    foreach($result2 as $communityListVal) :
-      $comN = $tbName['tbn'].'_'.$communityListVal['community'];
-      $comL = $communityListVal['community'];
-      try {
-        $sql = "INSERT INTO $comN (
-        community, name, age, sex, feature, remarks, others
-        ) SELECT community, name, age, sex, feature, remarks, others FROM $tbName[tbn] WHERE community = '$comL'";
-        $sth = $this->dbh->prepare($sql);
-        $sth->execute();
-      } catch(\Exception $e) {
-        $sql = "CREATE TABLE $comN(
-          id INT(11) AUTO_INCREMENT NOT NULL, 
-          community VARCHAR(30),
-          name VARCHAR(30),
-          age VARCHAR(6),
-          sex VARCHAR(10),
-          feature VARCHAR(30),
-          remarks VARCHAR(30),
-          others VARCHAR(300),
-          PRIMARY KEY (id))";
-        $sth = $this->dbh->prepare($sql);
-        $sth->execute();
-        $sql = "INSERT INTO $comN (
-          community, name, age, sex, feature, remarks, others
-          ) SELECT community, name, age, sex, feature, remarks, others FROM $tbName[tbn] WHERE community = '$comL'";
-        $sth = $this->dbh->prepare($sql);
-        $sth->execute();
-      }
-    endforeach;
-    
-    // foreach($result as $communityListVal) :
+    // $sql = "SELECT DISTINCT community FROM $tbName[tbn]";
+    // $sth = $this->dbh->prepare($sql);
+    // $sth->execute();
+    // $result2 = $sth->fetchAll(PDO::FETCH_ASSOC);
+    // foreach($result2 as $communityListVal) :
     //   $comN = $tbName['tbn'].'_'.$communityListVal['community'];
-    //   $sql = "SELECT COUNT(*) FROM $comN";
-    //   $sth = $this->dbh->prepare($sql);
-    //   $sth->execute();
-    //   $result3 = $sth->fetch(PDO::FETCH_ASSOC);
-    //   if($result3["COUNT(*)"] === 0) {
-    //     $sql = "DROP TABLE $comN";
+    //   $comL = $communityListVal['community'];
+    //   try {
+    //     $sql = "INSERT INTO $comN (
+    //     community, name, age, sex, feature, remarks, others
+    //     ) SELECT community, name, age, sex, feature, remarks, others FROM $tbName[tbn] WHERE community = '$comL'";
+    //     $sth = $this->dbh->prepare($sql);
+    //     $sth->execute();
+    //   } catch(\Exception $e) {
+    //     $sql = "CREATE TABLE $comN(
+    //       id INT(11) AUTO_INCREMENT NOT NULL, 
+    //       community VARCHAR(30),
+    //       name VARCHAR(30),
+    //       age VARCHAR(6),
+    //       sex VARCHAR(10),
+    //       feature VARCHAR(30),
+    //       remarks VARCHAR(30),
+    //       others VARCHAR(300),
+    //       PRIMARY KEY (id))";
+    //     $sth = $this->dbh->prepare($sql);
+    //     $sth->execute();
+    //     $sql = "INSERT INTO $comN (
+    //       community, name, age, sex, feature, remarks, others
+    //       ) SELECT community, name, age, sex, feature, remarks, others FROM $tbName[tbn] WHERE community = '$comL'";
     //     $sth = $this->dbh->prepare($sql);
     //     $sth->execute();
     //   }
     // endforeach;
+    
+    foreach($result as $communityListVal) :
+      $comN = $tbName['tbn'].'_'.$communityListVal['community'];
+      $sql = "SELECT COUNT(*) FROM $comN";
+      $sth = $this->dbh->prepare($sql);
+      $sth->execute();
+      $result3 = $sth->fetch(PDO::FETCH_ASSOC);
+      if($result3["COUNT(*)"] === 0) {
+        $sql = "DROP TABLE $comN";
+        $sth = $this->dbh->prepare($sql);
+        $sth->execute();
+      }
+    endforeach;
   }
   
   /**
