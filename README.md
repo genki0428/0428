@@ -9,6 +9,9 @@ PHP自作
 
 登録内容：所属、名前、特徴　etc.
 # 使い方
+サイトトップへ下記からアクセスできます。
+https://ggg0428.shop/0428/peoput/Views/Players/top.php
+
 ユーザー登録
 
   ・アカウント名
