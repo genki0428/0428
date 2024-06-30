@@ -18,7 +18,7 @@ $err = [];
 $accountName = filter_input(INPUT_POST, 'accountName');
 $mbaccountName = mb_strlen($accountName);
 if (!preg_match("/^[^0-9]{1,}+$/i",$accountName) or ($mbaccountName > 20)) {
-  $err[] = '20文字以下で氏名を入力してください。';
+  $err[] = '20文字以下で氏名を入力してください。（数字不可）';
 }
 
 $mail = filter_input(INPUT_POST, 'mail');
