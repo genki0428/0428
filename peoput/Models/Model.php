@@ -360,28 +360,28 @@ class Model extends Db {
    */
   public function acquaintanceEdit($id,$community, $name, $age, $sex, $feature, $remarks, $others) {
     $tbName['tbn'] = $_SESSION['login_user']['name'].'_'.$_SESSION['login_user']['id'];
-    $sql = "SELECT DISTINCT community FROM $tbName[tbn]";
-    $sth = $this->dbh->prepare($sql);
-    $sth->execute();
-    $result = $sth->fetchAll(PDO::FETCH_ASSOC);
-    foreach($result as $communityListVal) :
-      $comN = $tbName['tbn'].'_'.$communityListVal['community'];
-      $sql = "DELETE FROM $comN";
-      $sth = $this->dbh->prepare($sql);
-      $sth->execute();
-    endforeach;
-
-    // $sql = "UPDATE $tbName[tbn] SET community = :community, name = :name, age = :age, sex = :sex, feature = :feature, remarks = :remarks, others = :others WHERE id = :id";
+    // $sql = "SELECT DISTINCT community FROM $tbName[tbn]";
     // $sth = $this->dbh->prepare($sql);
-    // $sth->bindParam(':id', $id, PDO::PARAM_INT);
-    // $sth->bindParam(':community', $community, PDO::PARAM_STR);
-    // $sth->bindParam(':name', $name, PDO::PARAM_STR);
-    // $sth->bindParam(':age', $age, PDO::PARAM_STR);
-    // $sth->bindParam(':sex', $sex, PDO::PARAM_STR);
-    // $sth->bindParam(':feature', $feature, PDO::PARAM_STR);
-    // $sth->bindParam(':remarks', $remarks, PDO::PARAM_STR);
-    // $sth->bindParam(':others', $others, PDO::PARAM_STR);
     // $sth->execute();
+    // $result = $sth->fetchAll(PDO::FETCH_ASSOC);
+    // foreach($result as $communityListVal) :
+    //   $comN = $tbName['tbn'].'_'.$communityListVal['community'];
+    //   $sql = "DELETE FROM $comN";
+    //   $sth = $this->dbh->prepare($sql);
+    //   $sth->execute();
+    // endforeach;
+
+    $sql = "UPDATE $tbName[tbn] SET community = :community, name = :name, age = :age, sex = :sex, feature = :feature, remarks = :remarks, others = :others WHERE id = :id";
+    $sth = $this->dbh->prepare($sql);
+    $sth->bindParam(':id', $id, PDO::PARAM_INT);
+    $sth->bindParam(':community', $community, PDO::PARAM_STR);
+    $sth->bindParam(':name', $name, PDO::PARAM_STR);
+    $sth->bindParam(':age', $age, PDO::PARAM_STR);
+    $sth->bindParam(':sex', $sex, PDO::PARAM_STR);
+    $sth->bindParam(':feature', $feature, PDO::PARAM_STR);
+    $sth->bindParam(':remarks', $remarks, PDO::PARAM_STR);
+    $sth->bindParam(':others', $others, PDO::PARAM_STR);
+    $sth->execute();
 
     // $tbName['tbn'] = $_SESSION['login_user']['name'].'_'.$_SESSION['login_user']['id'];
     // $sql = "SELECT DISTINCT community FROM $tbName[tbn]";
