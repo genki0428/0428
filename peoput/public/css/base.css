@@ -75,6 +75,7 @@ input::placeholder {
 .send, .login{
   background: white;
   border-color: black;
+  color: black;
 }
 
 .login, .back{
