@@ -11,7 +11,7 @@ PHP自作
 # 使い方
 サイトトップへ下記からアクセスできます。
 
-https://ggg0428.shop/0428/peoput/Views/Players/top.php
+http://ggg0428.s322.xrea.com/peoput/Views/Players/top.php
 
 ユーザー登録
 
